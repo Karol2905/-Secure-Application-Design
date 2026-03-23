@@ -39,23 +39,7 @@ services:
       postgres:
         condition: service_healthy
 
-  apache:
-    image: httpd:2.4-alpine
-    container_name: workshop_apache
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      # Configuración de producción con TLS
-      - ./src/main/resources/apache/httpd.prod.conf:/usr/local/apache2/conf/httpd.conf:ro
-      # Frontend estático
-      - ./frontend:/usr/local/apache2/htdocs:ro
-      # Certificados Let's Encrypt montados desde el host EC2
-      - /etc/letsencrypt:/etc/letsencrypt:ro
-      - /var/lib/letsencrypt:/var/lib/letsencrypt:ro
-    depends_on:
-      - app-service
+
 
 volumes:
   postgres_data:
