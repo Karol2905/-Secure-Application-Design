@@ -1,0 +1,25 @@
+# Maven
+target/
+*.jar
+*.war
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Secretos — NUNCA subir al repositorio
+.env
+application-prod.properties
+*.p12
+*.jks
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
