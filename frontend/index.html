@@ -301,8 +301,8 @@
    * al contenedor app-service:8080 por HTTP (reverse proxy Docker).
    * El navegador nunca habla directamente con Spring Boot.
    */
-  const API = 'https://tdsespring.duckdns.org:8443/api';
 
+  const API = 'http://tdsespring.duckdns.org/api';
 
   let token  = sessionStorage.getItem('token')  || null;
   let expiry = Number(sessionStorage.getItem('expiry') || 0);
