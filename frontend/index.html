@@ -302,7 +302,7 @@
    * El navegador nunca habla directamente con Spring Boot.
    */
 
-  const API = 'http://tdsespring.duckdns.org/api';
+  const API = 'https://tdsespring.duckdns.org:8443/api';
 
   let token  = sessionStorage.getItem('token')  || null;
   let expiry = Number(sessionStorage.getItem('expiry') || 0);
